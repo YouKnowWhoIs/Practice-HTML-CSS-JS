@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="uk">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>To Do List</title>
+    <link rel="stylesheet" type="text/css" href="style.css" />
+  </head>
+  <body>
+    <!-- завдання на ToDo List -->
+
+    <div>
+      <h1>To Do List</h1>
+    </div>
+
+    <div>
+      <input type="text" id="input" placeholder="enter words" />
+      <button class="addBtn" type="button" onclick="addTask()">Add</button>
+    </div>
+
+    <div>
+      <ul class="list"></ul>
+    </div>
+
+    <!--------- кінець ToDo List --------->
+
+    <!-- модальне вiкно -->
+    <!---- перший варіант ---->
+
+    <div>
+      <button type="button" onclick="openModal1()">
+        вiдкpити модальне вікно 1
+      </button>
+    </div>
+
+    <div class="conteiner"></div>
+
+    <br />
+    <!---- другий варінт ---->
+    <br />
+
+    <div>
+      <button type="button" onclick="openModal2()">
+        вiдкpити модальне вікно 2
+      </button>
+    </div>
+
+    <div class="conteinerModal2" onclick="closeModal()">
+      <div class="modal2" role="dialog" aria-modal="true">
+        <p>модальне вікно №2</p>
+        <button type="button" onclick="closeModal()">
+          закрити модaльне вiкно
+        </button>
+      </div>
+    </div>
+
+    <!----------- кінець модалки ----------->
+    <br />
+    <!-- карусель картинок -->
+
+    <div class="corusel">
+      <button type="button" class="next">Вперед</button>
+      <img src="..." alt="img" id="coruselImg" />
+      <button type="button" class="prev">Назад</button>
+    </div>
+
+    <!----------- кінець каруселі ---------->
+
+    <!-- акардіон (відкриття модального вікна з текстом при натискані на загловок) -->
+
+    <!---------- кінець акардіону ----------->
+
+    <script src="./script.js"></script>
+  </body>
+</html>
