@@ -99,6 +99,22 @@ prevBtn.addEventListener("click", () => {
   updateImage();
 });
 
+// четверте завдання
+
+const acardionOpenBtn = document.querySelectorAll(".accordionOpen");
+
+acardionOpenBtn.forEach((btn) =>
+  btn.addEventListener("click", () => {
+    const parentItem = btn.closest(".accordionContainer");
+
+    const text = parentItem.querySelector(".accordionContent");
+
+    if (text) {
+      text.classList.toggle("open");
+    }
+  })
+);
+
 // завдання на логіку
 // while (true) {
 //   let n = prompt("Введи парне число", "");

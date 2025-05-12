@@ -1,12 +1,15 @@
 body {
   font-family: Arial, sans-serif;
   margin: 0 auto;
+  margin-bottom: 50px;
   background-color: #f3f1e9;
 }
 
 button {
   cursor: pointer;
 }
+
+/* для модалки */
 
 .conteinerModal1 {
   background-color: rgba(0, 0, 0, 0.5);
@@ -56,4 +59,35 @@ button {
   text-align: center;
   border-radius: 10px;
   z-index: 15;
+}
+
+/* для акардiону */
+
+.accordion {
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+}
+
+.accordionHeader h3 {
+  margin: 0;
+  padding: 6px;
+}
+
+.acardionOpen {
+  margin-left: 25px;
+  border-radius: 6px;
+}
+
+.accordionContent {
+  display: none;
+}
+
+.accordionContent.open {
+  display: flex;
+}
+
+.accordionContent p {
+  margin-left: 45px;
+  width: 350px;
 }
