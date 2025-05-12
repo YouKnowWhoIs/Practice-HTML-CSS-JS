@@ -115,6 +115,44 @@ acardionOpenBtn.forEach((btn) =>
   })
 );
 
+// п'яте завдання
+
+const form = document.getElementById("myForm");
+
+form.addEventListener("submit", (event) => {
+  event.preventDefault();
+
+  submitForm();
+});
+
+function showError(text) {
+  const errorText = document.querySelector(".errorText");
+
+  errorText.textContent = text;
+}
+
+function submitForm() {
+  const name = document.getElementById("name");
+  const email = document.getElementById("email");
+
+  const trimmedName = name.value.trim();
+  const trimmedEmail = email.value.trim();
+
+  if (trimmedName === "" && !trimmedEmail.includes(".")) {
+    showError("Поля пустi!");
+  } else if (trimmedName === "") {
+    name.focus();
+    showError("Поле з iм'ям пусте!");
+  } else if (!trimmedEmail.includes(".")) {
+    email.focus();
+    showError("Поле з емейлом не правильне або пусте!");
+  } else {
+    showError("Все правильно!");
+    name.value = "";
+    email.value = "";
+  }
+}
+
 // завдання на логіку
 // while (true) {
 //   let n = prompt("Введи парне число", "");
