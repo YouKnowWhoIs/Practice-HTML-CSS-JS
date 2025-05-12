@@ -1,20 +1,37 @@
 // перше завдання на ToDo List
+function showToDoListError(text) {
+  const errorToDoText = document.querySelector(".errorToDoText");
+
+  errorToDoText.textContent = text;
+}
+
 function addTask() {
   const input = document.getElementById("input");
   const list = document.querySelector(".list");
 
   const textText = input.value.trim();
 
-  if (textText === "") return;
+  if (textText === "") {
+    showToDoListError("Поле пусте!");
+    return;
+  } else {
+    showToDoListError("");
+  }
 
   const li = document.createElement("li");
-  li.textContent = textText;
+  li.classList.add("listBorder");
+
+  const span = document.createElement("span");
+  span.classList.add("listContent");
+  span.textContent = textText;
 
   const deleteBtn = document.createElement("button");
+  deleteBtn.classList.add("deleteBtn");
   deleteBtn.textContent = "видалити";
   deleteBtn.onclick = () => li.remove();
 
-  li.appendChild(deleteBtn);
+  li.appendChild(span);
+  span.appendChild(deleteBtn);
   list.appendChild(li);
 
   input.value = "";
@@ -39,6 +56,7 @@ function openModal1() {
   divModal.onclick = (event) => event.stopPropagation();
 
   const closeModalBtn = document.createElement("button");
+  closeModalBtn.classList.add("closeModalBtn");
   closeModalBtn.textContent = "закрити модальне вікно";
   closeModalBtn.onclick = () => divBackground.remove();
 
@@ -125,7 +143,7 @@ form.addEventListener("submit", (event) => {
   submitForm();
 });
 
-function showError(text) {
+function showFormError(text) {
   const errorText = document.querySelector(".errorText");
 
   errorText.textContent = text;
@@ -139,15 +157,15 @@ function submitForm() {
   const trimmedEmail = email.value.trim();
 
   if (trimmedName === "" && !trimmedEmail.includes(".")) {
-    showError("Поля пустi!");
+    showFormError("Поля пустi!");
   } else if (trimmedName === "") {
     name.focus();
-    showError("Поле з iм'ям пусте!");
+    showFormError("Поле з iм'ям пусте!");
   } else if (!trimmedEmail.includes(".")) {
     email.focus();
-    showError("Поле з емейлом не правильне або пусте!");
+    showFormError("Поле з емейлом не правильне або пусте!");
   } else {
-    showError("Все правильно!");
+    showFormError("Все правильно!");
     name.value = "";
     email.value = "";
   }
