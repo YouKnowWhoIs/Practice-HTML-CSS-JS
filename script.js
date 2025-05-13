@@ -171,6 +171,25 @@ function submitForm() {
   }
 }
 
+// шосте завдання
+
+function timerSecond() {
+  const second = document.querySelector(".second");
+
+  let timerId = setInterval(() => {
+    let count = Number(second.textContent);
+    count--;
+    second.textContent = count;
+
+    if (count === 0) {
+      clearInterval(timerId);
+      alert("10 секунд пройшло!");
+
+      second.textContent = 10;
+    }
+  }, 1000);
+}
+
 // завдання на логіку
 // while (true) {
 //   let n = prompt("Введи парне число", "");

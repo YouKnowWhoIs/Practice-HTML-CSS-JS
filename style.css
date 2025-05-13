@@ -204,16 +204,22 @@ button {
   display: flex;
   flex-direction: column;
   gap: 25px;
+  margin-left: 40%;
+  margin-bottom: 50px;
 }
 
-.accordionHeader h3 {
+.accordionHeader h4 {
   margin: 0;
   padding: 6px;
 }
 
-.acardionOpen {
-  margin-left: 25px;
+.accordionOpen {
   border-radius: 6px;
+  height: 40px;
+  font-size: large;
+  border: 2px solid #4a4a4a;
+  border-radius: 20px;
+  background-color: #a4c0e4;
 }
 
 .accordionContent {
@@ -222,9 +228,65 @@ button {
 
 .accordionContent.open {
   display: flex;
+  background-color: #fff;
+  border: 0;
+  border-radius: 6px;
+  width: 50%;
+  margin-top: 10px;
 }
 
 .accordionContent p {
-  margin-left: 45px;
+  margin-left: 35px;
   width: 350px;
+}
+
+/* для форми валідації */
+
+#myForm {
+  display: flex;
+  flex-direction: column;
+  gap: 15px;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+#myForm input {
+  padding-left: 10px;
+  width: 350px;
+  height: 30px;
+  border: 2px solid #4a4a4a;
+  border-radius: 6px;
+}
+
+#myForm button {
+  width: 150px;
+  height: 40px;
+  border: 2px solid #4a4a4a;
+  border-radius: 10px;
+  background-color: #dbf5dd;
+  font-size: large;
+  margin-left: 16%;
+}
+
+/* таймер */
+
+#timerConteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+  margin-bottom: 50px;
+}
+
+.second {
+  font-size: 80px;
+  font-weight: 700;
+}
+
+.timerBtn {
+  width: 150px;
+  height: 40px;
+  border: 2px solid #4a4a4a;
+  border-radius: 10px;
+  background-color: #dbf5dd;
 }
