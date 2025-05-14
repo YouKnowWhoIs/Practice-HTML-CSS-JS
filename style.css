@@ -200,7 +200,7 @@ button {
 
 /* для акардiону */
 
-.accordion {
+#accordion {
   display: flex;
   flex-direction: column;
   gap: 25px;
@@ -289,4 +289,46 @@ button {
   border: 2px solid #4a4a4a;
   border-radius: 10px;
   background-color: #dbf5dd;
+}
+
+/* пошук по списку */
+
+#searchConteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 50px;
+}
+
+.inputSearch {
+  padding-left: 10px;
+  width: 150px;
+  height: 30px;
+  border: 2px solid #4a4a4a;
+  border-radius: 6px;
+}
+
+.searchHeader button {
+  border-radius: 6px;
+  height: 40px;
+  font-size: medium;
+  padding: 0 15px;
+  border: 2px solid #4a4a4a;
+  border-radius: 20px;
+  background-color: #a4c0e4;
+}
+
+.errorSearch {
+  margin-top: 10px;
+  color: #ac4444;
+  text-align: center;
+  font-size: large;
+}
+
+.listFruit {
+  font-size: large;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+  list-style: decimal;
 }

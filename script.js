@@ -190,6 +190,55 @@ function timerSecond() {
   }, 1000);
 }
 
+//  сьоме завдання
+function errorSearch(text) {
+  const errorSearch = document.querySelector(".errorSearch");
+
+  errorSearch.textContent = text;
+}
+
+const inputSearch = document.querySelector(".inputSearch");
+const items = document.querySelectorAll(".listFruit li");
+
+const itemsArray = Array.from(items);
+
+function search() {
+  const query = inputSearch.value.toLowerCase();
+  if (query.trim() === "") {
+    errorSearch("Поле пусте!");
+    inputSearch.focus();
+    return;
+  } else {
+    errorSearch("");
+  }
+
+  let foundCount = 0;
+
+  itemsArray.forEach((item) => {
+    const text = item.textContent.toLowerCase();
+    const match = text.includes(query);
+    item.style.display = match ? "list-item" : "none";
+
+    if (match) {
+      foundCount++;
+    }
+  });
+
+  if (foundCount === 0) {
+    errorSearch("Нiчого не знайдено");
+  }
+
+  inputSearch.value = "";
+}
+
+function resetList() {
+  itemsArray.forEach((item) => {
+    item.style.display = "list-item";
+  });
+  inputSearch.value = "";
+  errorSearch("");
+}
+
 // завдання на логіку
 // while (true) {
 //   let n = prompt("Введи парне число", "");

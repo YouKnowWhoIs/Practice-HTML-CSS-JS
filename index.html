@@ -69,7 +69,7 @@
     <br />
     <!-- акардіон (відкриття тексту знизу при натискані на загловок) -->
 
-    <div class="accordion">
+    <div id="accordion">
       <span class="accordionContainer">
         <span class="accordionHeader">
           <button type="button" class="accordionOpen">
@@ -155,6 +155,36 @@
     </div>
 
     <!----------- кінець таймеру ------------->
+
+    <!-- пошук по списку  -->
+
+    <div id="searchConteiner">
+      <div class="searchHeader">
+        <input
+          placeholder="Введи літери..."
+          type="search"
+          class="inputSearch"
+        />
+        <button type="button" onclick="search()">Search</button>
+        <button type="button" onclick="resetList()">Reset</button>
+        <div class="errorSearch"></div>
+      </div>
+
+      <ul class="listFruit">
+        <li>Яблуко</li>
+        <li>Банан</li>
+        <li>Апельсин</li>
+        <li>Ківі</li>
+        <li>Груша</li>
+        <li>Манго</li>
+        <li>Персик</li>
+        <li>Слива</li>
+        <li>Ананас</li>
+        <li>Гранат</li>
+      </ul>
+    </div>
+
+    <!------------ кінець пошуку по списку ------------>
 
     <script src="./script.js"></script>
   </body>
