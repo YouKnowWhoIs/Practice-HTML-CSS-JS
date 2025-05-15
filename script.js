@@ -239,6 +239,36 @@ function resetList() {
   errorSearch("");
 }
 
+// восьме завдання (переключатель теми)
+
+const toggle = document.querySelector(".themeToggle");
+
+const saveTheme = localStorage.getItem("theme");
+
+if (saveTheme === "light") {
+  document.body.classList.add("light");
+  toggle.checked = false;
+} else {
+  document.body.classList.add("dark");
+  toggle.checked = true;
+}
+
+toggle.addEventListener("change", () => {
+  let theme = toggle.checked ? true : false;
+
+  if (theme === true) {
+    localStorage.setItem("theme", "dark");
+    document.body.classList.add("dark");
+    document.body.classList.remove("light");
+    toggle.checked = true;
+  } else {
+    localStorage.setItem("theme", "light");
+    document.body.classList.add("light");
+    document.body.classList.remove("dark");
+    toggle.checked = false;
+  }
+});
+
 // завдання на логіку
 // while (true) {
 //   let n = prompt("Введи парне число", "");

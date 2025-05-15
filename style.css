@@ -2,18 +2,54 @@ body {
   font-family: Arial, sans-serif;
   padding: 10px;
   margin-bottom: 50px;
-  background-color: #f3f1e9;
+  background-color: var(--back-c);
+  color: var(--color);
+}
+
+body.dark {
+  --back-c: #333333;
+  --color: #f3f1e9;
+  --back-c-inp: #a3a0ab;
+}
+
+body.light {
+  --back-c: #f3f1e9;
+  --color: #333333;
+  --back-c-inp: #fff;
+}
+
+button {
+  cursor: pointer;
 }
 
 h1 {
   padding-top: 0;
   margin-top: 0;
-  margin-bottom: 50px;
-  text-align: center;
 }
 
-button {
-  cursor: pointer;
+input {
+  background-color: var(--back-c-inp);
+}
+
+#headerConteiner {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  justify-content: center;
+  margin-bottom: 50px;
+}
+
+/* для переключателя теми */
+
+#themeConteiner {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.themeToggle {
+  width: 50px;
+  height: 50px;
 }
 
 /* для toDoList */
